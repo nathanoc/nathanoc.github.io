@@ -58,5 +58,3 @@ function addRepetitions()
         document.getElementById("indexHead").innerHTML = currentHead + indexStylesheets;
     }
 }
-
-console.log("hello".substring(0, 2) + "hello".substring(3, 5));
