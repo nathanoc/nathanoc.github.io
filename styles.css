@@ -20,7 +20,7 @@ li h1, li h2, li h3, li h4, li h5, li h6
 
 a
 {
-    color: #c3915b
+    color: #c3915b;
 }
 
 a:visited
@@ -28,10 +28,9 @@ a:visited
     color: #a3713b
 }
 
-#nav
+.nav
 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 /* Tooltip container */
