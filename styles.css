@@ -12,6 +12,10 @@
     --warn-1: #ff4444;
     --warn-2: #ff8888;
     --warn-3: #ffaaaa;
+
+    --code-block-background: #252525;
+    --code-block-default: #cccccc;
+    --code-block-comment: #888888;
 }
 
 body
@@ -103,4 +107,20 @@ a:visited
 .warn-3
 {
     color: var(--warn-3);
+}
+
+.codeblock
+{
+    background-color: var(--code-block-background);
+    color: var(--code-block-default);
+
+    font-family: monospace;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.codecomment
+{
+    color: var(--code-block-comment);
 }

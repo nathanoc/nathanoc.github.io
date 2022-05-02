@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sudoku Solver</title>
+
+        <link rel="stylesheet" href="../../styles.css">
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <script>$(function(){$("#nav-placeholder").load("../../nav.html");});</script>
+		<div id="nav-placeholder"></div>
+		<br>
+
+        <h1>Sudoku Solver - Documentation</h1>
+        <p>This page is just a HTML-ification of the <a href="https://github.com/nathanoc/sudoku-solver/blob/main/README.md">README</a> on the github repository.</p>
+
+        <h2>Summary</h2>
+        <p>This is a sudoku solver (two sudoku solvers, actually) that I put together over the course of a few evenings. One is an algorithm that I came up with myself, and is basically just the way I play sudoku, by going through every row, column and box and seeing if there are any squares that can only be one number, and filling those in until the whole puzzle is filled (more detail in the Bad Solver section). As it turns out this doesn't work for most harder sudokus, hence the second algorithm: the backtracking algorithm, a.k.a. the first algorithm that comes up when you google "sudoku solver algorithm". Though the algorithm isn't mine, the implementation is (see the Backtracking Solver section). It basically works by filling in squares until it gets stuck, and then going back and adjusting things until they do work.</p>
+
+        <h2>Bad Solver</h2>
+        <h3>Algorithm Summary</h3>
+        <p>The program repeatedly loops through every box in the grid, making a list of all the possible numbers that could go in each square. If there is only one possible number for a square, it fills that square in. It repeats until either the board is filled or it reaches a hard-coded iteration limit.</p>
+        <h3>Code</h3>
+        <p>The code is divided across five files, which turned out to be massively unnecessary. These are <a href="https://github.com/nathanoc/sudoku-solver/blob/main/bad-solver/gridManipulation.py">gridManipulation.py</a>, <a href="https://github.com/nathanoc/sudoku-solver/blob/main/bad-solver/inputoutput.py">inputoutput.py</a>, <a href="https://github.com/nathanoc/sudoku-solver/blob/main/bad-solver/main.py">main.py</a>, <a href="https://github.com/nathanoc/sudoku-solver/blob/main/bad-solver/solver.py">solver.py</a>, and <a href="https://github.com/nathanoc/sudoku-solver/blob/main/bad-solver/validity.py">validity.py</a>.</p>
+
+        <h2>Backtracking Solver</h2>
+        <h3>Algorithm Summary</h3>
+        <p>The program begins at the top-left box, and increments its value until it fits. It then moves on to the next square and does the same, until it reaches a square where no number can fit. At this point the program backtracks (hence its name) until it finds a square that can be adjusted, and then makes its way forward again, backtracking where necessary, until the whole puzzle is filled in.</p>
+        <h3>Code</h3>
+        <p>Having learned my lesson from making the bad solver, I put all the code for this algorithm into one file - [solver.py](backtracking-solver/solver.py). When I made that decision I thought I might end up regretting it:</p>
+        <div class="codeblock">
+            <span class="codecomment"># all in one file; might regret this later.</span>
+        </div>
+        <p>In the end, though, it caused me no problems at all, and partially for this reason I found this algorithm a lot easier to work with than the bad solver.</p>
+    </body>
+</html>
