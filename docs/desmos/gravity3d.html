@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D Gravity Simulation</title>
+
+        <link rel="stylesheet" href="../../styles.css">
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../../links.js"></script>
+    </head>
+
+    <body>
+        <script>$(function(){$("#nav-placeholder").load("../../nav.html");});</script>
+		<div id="nav-placeholder"></div>
+		<br>
+
+        <h1>3D Gravity Simulation - Documentation</h1>
+
+        <iframe style="width: 960px; height: 540px;" class="fillSrc" id="gravity3d" src=""></iframe>
+
+        <h2>Summary</h2>
+        <p>
+            This is a simulation of the movements of two bodies of given masses and starting positions in a 3D space.<br>
+            <span class="warn-3">Note: Desmos uses imprecise floating point maths - the behaviour will not perfectly match what should theoretically be expected.</span>
+        </p>
+
+        <h2>Usage</h2>
+        <ul>
+            <li>To run the simulation, click the metronome with the play button in the top left.</li>
+            <li>To pause, click it again.</li>
+            <li>To reset, click the arrow next to the reset function - the second level of the list on the left.</li>
+        </ul>
+
+        <h2>Explanations of Individual Variables and Functions</h2>
+
+        <h3>Variables</h3>
+        <ul style="line-height: 1.8;">
+            <li>t<sub>scale</sub> - Short for time scale; controls the speed of the simulation.</li>
+            <li>c<sub>amdist</sub> - Short for camera distance. Effectively controls the z position of the camera.</li>
+            <li>x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>, x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub> - The x, y and z positions of each body.</li>
+            <li>r<sub>0</sub>, r<sub>1</sub> - The radii of the two bodies. Altering this does not affect the mass - mass must be manually altered (i.e. density is not constant).</li>
+            <li>v<sub>0</sub>, v<sub>1</sub> - The velocities of the two bodies, as a list in the form of [x, y, z] These can be altered while the simulation is not running to give either body an initial velocity.</li>
+            <li>m<sub>0</sub>, m<sub>1</sub> - The masses of the two bodies.</li>
+            <li>r - The distance between the two bodies, set every tick.</li>
+            <li>f - The force that should be exerted on both bodies as a scalar, set every tick.</li>
+            <li>v<sub>ector0</sub>, v<sub>ector1</sub> - Vectors of magnitude 1, stored as lists in the form of [x, y, z], that represent the directions of the forces that should be applied to the two bodies.</li>
+            <li>C - The x and y position of the centre of mass. The z is unnecessary as the centre of mass is only for a visual purpose.</li>
+            <li>x<sub>centre</sub>, y<sub>centre</sub>, z<sub>centre</sub> - The x, y and z positions of the centre of mass, used for the label on point C.</li>
+            <li>B<sub>1</sub>, B<sub>2</sub> - Points in the centres of the two bodies, so that they can be labeled.</li>
+            <li>x<sub>B1</sub>, y<sub>B1</sub>, z<sub>B1</sub>, x<sub>B2</sub>, y<sub>B2</sub>, z<sub>B2</sub> - The x, y, and z positions of the two bodies, to one decimal place. Used for the labels on the two bodies.</li>
+        </ul>
+
+        <h3>Functions</h3>
+        <ul style="line-height: 1.8;">
+            <li>a(d) - Short for accelerate (i.e. accelerate the two bodies) but effectively serves as a master function, running every tick and doing the majority of the calculations. Its full responsibilities are as follows:
+                <ul>
+                    <li>Calculate the distance between the two bodies.</li>
+                    <li>Calculate the force that should be applied to the two bodies, as a scalar.</li>
+                    <li>Calculate the direction in which this force should be applied to each body.</li>
+                    <li>Calculate what the consequent acceleration on each body should be, and hence adjust their velocities.</li>
+                    <li>Move the two bodies according to their new velocities.</li>
+                </ul>
+                The function takes d (delta time) as a parameter so that the simulation runs at a consistent speed even if the duration of individual ticks varies.
+            </li>
+            <li>r<sub>eset</sub> - Resets the simulation to a preset state.</li>
+            <li>d<sub>istfunc</sub>(d<sub>ist</sub>) - When calculating the force of gravity, the force is equal to the reciprocal of this function of the distance between the two bodies. So, the function returns d<sub>ist</sub><sup>2</sup> by default as real gravity is inversely proportional to the square of the distances between the two bodies.</li>
+        </ul>
+
+        <p>This documentation was last updated 20/03/2022. If it does not appear to match the preview shown at the top, it may be outdated.</p>
+    </body>
+</html>
