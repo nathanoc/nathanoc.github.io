@@ -48,6 +48,11 @@ a:visited
     color: var(--accent-dimmed);
 }
 
+li
+{
+    line-height: 1.6;
+}
+
 .nav
 {
     margin-right: 10px;
