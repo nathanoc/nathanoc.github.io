@@ -3,7 +3,7 @@ const links = {
     gravity3d: "https://www.desmos.com/calculator/pmyjtfum2s",
     gravity2d: "https://www.desmos.com/calculator/w81uxb0gn5",
     derivatives: "https://www.desmos.com/calculator/wq8qyrwg3x",
-    antiderivatives: "https://www.desmos.com/calculator/dvrinxldbg"
+    antiderivatives: "https://www.desmos.com/calculator/w9pmretona"
 };
 
 window.onload = function()  // Function to fill in every href and src in the document
