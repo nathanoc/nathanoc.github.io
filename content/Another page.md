@@ -1,1 +1,1 @@
-Go back to [[Hello]]
+Go back to [[index]]
