@@ -1,9 +1,11 @@
 ---
-{"publish":true,"created":"2024-12-27T20:23:46.251+00:00","modified":"2025-08-22T19:18:53.915+01:00","cssclasses":""}
+{"publish":true,"created":"2024-12-27T20:23:46.251+00:00","modified":"2025-09-06T15:43:53.714+01:00","cssclasses":""}
 ---
 
 Furthest page reached: page 39 (21/02/2025)
 Current page: page 15 (08/08/2025)
+
+<small>Yes, my progression through this book is embarrassingly slow.</small>
 
 [[Preface]]
 [[Notes on the exercises]]
