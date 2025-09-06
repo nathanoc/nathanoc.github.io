@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-01-15T22:41:23.189+00:00","modified":"2025-09-06T15:41:21.361+01:00","cssclasses":""}
+{"publish":true,"created":"2025-01-15T22:41:23.189+00:00","modified":"2025-09-06T16:23:46.416+01:00","cssclasses":""}
 ---
 
 Hello. From this page, you can access the subset of my personal notes that I have decided to make public.
@@ -8,4 +8,4 @@ At the extreme ideal, these notes would negate the need for me to remember anyth
 
 Some notes express opinions that I disagree with, because disagreeable ideas are often still worth remembering. In these notes, I don't always make my disagreement explicit; I often simply explain the position and its arguments in a neutral fashion. This is because I cannot predict how my opinions will change, and as these notes expand I will likely not have the time or motivation to constantly update them according to my whims. As such, please don't hold any opinions expressed here against me - though, if you have a counter-argument, please tell me, as I can create a note for that.
 
-I hope you enjoy reading my notes. If you want a curated starting point, try 
+I hope you enjoy reading my notes. If you want a curated starting point, try my notes on Knuth's [[The Art of Computer Programming]].
