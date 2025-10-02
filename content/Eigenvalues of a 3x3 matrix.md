@@ -1,6 +1,8 @@
 ---
-{"publish":true,"created":"2025-03-06T18:57:03.804+00:00","modified":"2025-08-22T19:15:18.176+01:00","cssclasses":""}
+{"publish":true,"created":"2025-03-06T18:57:03.804+00:00","modified":"2025-10-02T21:42:18.876+01:00","cssclasses":""}
 ---
+
+Let $\mathbf{M}$ be a matrix, $\mathbf{v}$ be an [[Eigenvectors and eigenvalues\|eigenvector]] of $\mathbf{M}$, and $\lambda$ be the corresponding eigenvalue.
 
 $$
 \begin{align}
