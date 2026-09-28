@@ -1,0 +1,6 @@
+---
+publish: true
+---
+$c^2 = a^2+b^2-2ab\cos\theta$
+
+(TODO: add diagram)
